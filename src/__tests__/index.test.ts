@@ -972,6 +972,14 @@ const vectors: Array<TestVector> = [
     ],
   },
   {
+    name: 'STX',
+    coinType: 5757,
+    passingVectors: [
+      { text: 'SPAQZ999RG048DFZPMG2BXF9DEZVQTCYXRHE69DZ', hex: 'cd957fa529c4004435ffb52025f5e96bbfbbe99eee22e325bf' },
+      { text: 'SP31MXBEVBEGXF4YMDH4JF93W5XQGJVQRJNR37B9', hex: 'cd861a756edadd0ebc9ea362493d23e17b784b77c4ab819d69' },
+    ],
+  },
+  {
     name: 'GO',
     coinType: 6060,
     passingVectors: [

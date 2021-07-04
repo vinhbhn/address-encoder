@@ -30,6 +30,7 @@ import {
 import { sha512_256 } from 'js-sha512';
 import { decode as nanoBase32Decode, encode as nanoBase32Encode } from 'nano-base32';
 import { Keccak, SHA3 } from 'sha3';
+import { c32encode as stxAddressEncoder, c32decode as stxAddressDecoder } from './blockstack/stx-c32';
 import { filAddrDecoder, filAddrEncoder } from './filecoin/index';
 import { ChainID, isValidAddress } from './flow/index';
 import { groestl_2 }  from './groestl-hash-js/index';
@@ -1403,6 +1404,7 @@ export const formats: IFormat[] = [
   },
   getConfig('IOTA', 4218, bs58Encode, bs58Decode),
   getConfig('HNS', 5353, hnsAddressEncoder, hnsAddressDecoder),
+  getConfig('STX', 5757, stxAddressEncoder, stxAddressDecoder),
   hexChecksumChain('GO', 6060),
   getConfig('NULS', 8964, nulsAddressEncoder, nulsAddressDecoder),
   bech32Chain('AVAX', 9000, 'avax'),
